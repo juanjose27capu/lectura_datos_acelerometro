@@ -1,0 +1,1 @@
+/home/juan-jos-caputo/Documentos/Proyecto\ -\ Sismología/lectura_datos_acelerometro/rust_adc_daemon/target/debug/rust_adc_daemon: /home/juan-jos-caputo/Documentos/Proyecto\ -\ Sismología/lectura_datos_acelerometro/rust_adc_daemon/src/main.rs
