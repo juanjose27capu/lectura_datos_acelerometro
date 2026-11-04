@@ -8,7 +8,7 @@ use rppal::spi::{Bus, Mode, SlaveSelect, Spi};
 const DRDY_PIN: u8 = 23;
 const CS_PIN: u8 = 8;
 const SPI_BUS: Bus = Bus::Spi0;
-const SPI_SLAVE_SELECT: SlaveSelect = SlaveSelect::Ss0;
+const SPI_SLAVE_SELECT: SlaveSelect = SlaveSelect::Ss1;
 const SPI_CLOCK_SPEED_HZ: u32 = 1_920_000;
 const ADC_DRATE_WRITE_COMMAND: u8 = 0x53;
 const ADC_DRATE_VALUE: u8 = 0xA1;

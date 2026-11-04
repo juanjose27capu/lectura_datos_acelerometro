@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Interface for the PWM peripheral."><title>rppal::pwm - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2"href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../static.files/rustdoc-0c87338a.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="rppal" data-themes="" data-resource-suffix="" data-rustdoc-version="1.99.0 (b940084d7 2026-09-28)" data-channel="1.99.0" data-search-js="search-cf4fc35e.js" data-stringdex-js="stringdex-b5109af9.js" data-settings-js="settings-170eb4bf.js" ><script src="../../static.files/storage-41dd4d93.js"></script><script defer src="../sidebar-items.js"></script><script defer src="../../static.files/main-417ebf0a.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-9f56287d.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-eab170b8.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-044be391.svg"></head><body class="rustdoc mod"><a class="skip-main-content" href="#main-content">Skip to main content</a><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><rustdoc-topbar><h2><a href="#">Module pwm</a></h2></rustdoc-topbar><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../../rppal/index.html">rppal</a><span class="version">0.22.1</span></h2></div><div class="sidebar-elems"><section id="rustdoc-toc"><h2 class="location"><a href="#">Module pwm</a></h2><h3><a href="#">Sections</a></h3><ul class="block top-toc"><li><a href="#pwm-channels" title="PWM channels">PWM channels</a><ul><li><a href="#older-models-older-than-raspberry-pi-5" title="Older models (older than Raspberry Pi 5)">Older models (older than Raspberry Pi 5)</a></li><li><a href="#newer-models-raspberry-pi-5-and-later" title="Newer models (Raspberry Pi 5 and later)">Newer models (Raspberry Pi 5 and later)</a></li></ul></li><li><a href="#troubleshooting" title="Troubleshooting">Troubleshooting</a><ul><li><a href="#permission-denied" title="Permission denied">Permission denied</a></li><li><a href="#not-found" title="Not found">Not found</a></li></ul></li></ul><h3><a href="#structs">Module Items</a></h3><ul class="block"><li><a href="#structs" title="Structs">Structs</a></li><li><a href="#enums" title="Enums">Enums</a></li><li><a href="#types" title="Type Aliases">Type Aliases</a></li></ul></section><div id="rustdoc-modnav"><h2 class="in-crate"><a href="../index.html">In crate rppal</a></h2></div></div></nav><div class="sidebar-resizer" title="Drag to resize sidebar"></div><main><div class="width-limiter"><section id="main-content" class="content" tabindex="-1"><div class="main-heading"><div class="rustdoc-breadcrumbs"><a href="../index.html">rppal</a></div><h1>Module <span>pwm</span>&nbsp;<button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><a class="src" href="../../src/rppal/pwm.rs.html#1-513">Source</a> </span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>Interface for the PWM peripheral.</p>
+<p>RPPAL controls the Raspberry Pi’s PWM peripheral through the <code>pwm</code> sysfs
+interface.</p>
+<h3 id="pwm-channels"><a class="doc-anchor" href="#pwm-channels">§</a>PWM channels</h3><h4 id="older-models-older-than-raspberry-pi-5"><a class="doc-anchor" href="#older-models-older-than-raspberry-pi-5">§</a>Older models (older than Raspberry Pi 5)</h4>
+<p>The BCM283x SoC supports 2 hardware PWM channels. By default, the channels are
+mapped as follows:</p>
+<ul>
+<li>PWM0 = GPIO12/GPIO18</li>
+<li>PWM1 = GPIO13/GPIO19</li>
+</ul>
+<p>Consult the official documentation on how to enable and configure these.</p>
+<p>The Raspberry Pi’s analog audio output uses both PWM channels. Playing audio and
+simultaneously accessing a PWM channel may cause issues.</p>
+<p>Some of the GPIO pins capable of supporting hardware PWM can also be configured for
+use with other peripherals. Be careful not to enable two peripherals on the same pin
+at the same time.</p>
+<h4 id="newer-models-raspberry-pi-5-and-later"><a class="doc-anchor" href="#newer-models-raspberry-pi-5-and-later">§</a>Newer models (Raspberry Pi 5 and later)</h4>
+<p>The Raspberry Pi 5 and other recent models support 4 hardware PWM channels. By
+default, the channels are mapped as follows:</p>
+<ul>
+<li>PWM0 = GPIO12</li>
+<li>PWM1 = GPIO13</li>
+<li>PWM2 = GPIO18</li>
+<li>PWM3 = GPIO19</li>
+</ul>
+<p>Consult the official documentation on how to enable and configure these.</p>
+<p>Some of the GPIO pins capable of supporting hardware PWM can also be configured for
+use with other peripherals. Be careful not to enable two peripherals on the same pin
+at the same time.</p>
+<h3 id="troubleshooting"><a class="doc-anchor" href="#troubleshooting">§</a>Troubleshooting</h3><h4 id="permission-denied"><a class="doc-anchor" href="#permission-denied">§</a>Permission denied</h4>
+<p>If <a href="struct.Pwm.html#method.new"><code>new</code></a> returns an <code>io::ErrorKind::PermissionDenied</code> error, make sure
+<code>/sys/class/pwm</code> and its subdirectories has the appropriate permissions for the current user.
+Alternatively, you can launch your application using <code>sudo</code>.</p>
+<h4 id="not-found"><a class="doc-anchor" href="#not-found">§</a>Not found</h4>
+<p>If <a href="struct.Pwm.html#method.new"><code>new</code></a> returns an <code>io::ErrorKind::NotFound</code> error, you may have
+forgotten to enable the selected PWM channel. Consult the official Raspberry Pi documentation
+to correctly configure the needed channel(s).</p>
+</div></details><h2 id="structs" class="section-header">Structs<a href="#structs" class="anchor">§</a></h2><dl class="item-table"><dt><a class="struct" href="struct.Pwm.html" title="struct rppal::pwm::Pwm">Pwm</a></dt><dd>Provides access to the Raspberry Pi’s PWM peripheral.</dd></dl><h2 id="enums" class="section-header">Enums<a href="#enums" class="anchor">§</a></h2><dl class="item-table"><dt><a class="enum" href="enum.Channel.html" title="enum rppal::pwm::Channel">Channel</a></dt><dd>PWM channels.</dd><dt><a class="enum" href="enum.Error.html" title="enum rppal::pwm::Error">Error</a></dt><dd>Errors that can occur when accessing the PWM peripheral.</dd><dt><a class="enum" href="enum.Polarity.html" title="enum rppal::pwm::Polarity">Polarity</a></dt><dd>Output polarities.</dd></dl><h2 id="types" class="section-header">Type Aliases<a href="#types" class="anchor">§</a></h2><dl class="item-table"><dt><a class="type" href="type.Result.html" title="type rppal::pwm::Result">Result</a></dt><dd>Result type returned from methods that can have <code>pwm::Error</code>s.</dd></dl></section></div></main></body></html>
