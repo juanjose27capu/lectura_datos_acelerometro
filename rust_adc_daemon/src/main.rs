@@ -20,6 +20,7 @@ const ADC_RDATA_COMMAND: u8 = 0x01;
 const SAMPLES_PER_SECOND: f64 = 100.0;
 const SAMPLE_PERIOD: Duration = Duration::from_millis(10);
 const SAMPLES_PER_PRINT: u64 = 20;
+const ZMQ_ENDPOINT: &str = "tcp://127.0.0.1:5555";
 
 fn main() -> Result<(), Box<dyn Error>> {
     let gpio = Gpio::new()?;
@@ -38,6 +39,10 @@ fn main() -> Result<(), Box<dyn Error>> {
     thread::sleep(Duration::from_millis(10));
     while drdy_pin.is_high() {}
 
+    let zmq_context = zmq::Context::new();
+    let zmq_publisher = zmq_context.socket(zmq::PUB)?;
+    zmq_publisher.bind(ZMQ_ENDPOINT)?;
+
     let mut proximo_ciclo = Instant::now();
     let mut contador_muestras: u64 = 0;
 
@@ -45,6 +50,9 @@ fn main() -> Result<(), Box<dyn Error>> {
         let cuentas_x = leer_cuentas(&mut spi, &mut drdy_pin, &mut cs_pin, 0)?;
         let cuentas_y = leer_cuentas(&mut spi, &mut drdy_pin, &mut cs_pin, 1)?;
         let cuentas_z = leer_cuentas(&mut spi, &mut drdy_pin, &mut cs_pin, 2)?;
+
+        let mensaje = format!("{},{},{}", cuentas_x, cuentas_y, cuentas_z);
+        let _ = zmq_publisher.send(mensaje.as_bytes(), zmq::DONTWAIT);
 
         contador_muestras += 1;
         if contador_muestras % SAMPLES_PER_PRINT == 0 {
