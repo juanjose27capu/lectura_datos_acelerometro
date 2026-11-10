@@ -57,7 +57,7 @@ RED = "AR"
 ESTACION = "TEST"
 LOCALIZACION = "00"
 CANALES = ("HNE", "HNN", "HNZ")
-SALIDA_POR_DEFECTO = Path.home() / "Escritorio"
+SALIDA_POR_DEFECTO = Path.home() / "Desktop"
 
 
 # ---------------------------------------------------------------------------

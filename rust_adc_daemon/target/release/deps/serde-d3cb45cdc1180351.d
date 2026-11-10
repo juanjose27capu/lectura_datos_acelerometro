@@ -1,0 +1,14 @@
+/home/redes/Desktop/lectura_datos_acelerometro/rust_adc_daemon/target/release/deps/serde-d3cb45cdc1180351.d: /home/redes/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/lib.rs /home/redes/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/integer128.rs /home/redes/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/mod.rs /home/redes/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/de.rs /home/redes/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/ser.rs /home/redes/Desktop/lectura_datos_acelerometro/rust_adc_daemon/target/release/build/serde-1cd6a52cbb9f0f91/out/private.rs
+
+/home/redes/Desktop/lectura_datos_acelerometro/rust_adc_daemon/target/release/deps/libserde-d3cb45cdc1180351.rlib: /home/redes/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/lib.rs /home/redes/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/integer128.rs /home/redes/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/mod.rs /home/redes/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/de.rs /home/redes/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/ser.rs /home/redes/Desktop/lectura_datos_acelerometro/rust_adc_daemon/target/release/build/serde-1cd6a52cbb9f0f91/out/private.rs
+
+/home/redes/Desktop/lectura_datos_acelerometro/rust_adc_daemon/target/release/deps/libserde-d3cb45cdc1180351.rmeta: /home/redes/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/lib.rs /home/redes/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/integer128.rs /home/redes/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/mod.rs /home/redes/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/de.rs /home/redes/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/ser.rs /home/redes/Desktop/lectura_datos_acelerometro/rust_adc_daemon/target/release/build/serde-1cd6a52cbb9f0f91/out/private.rs
+
+/home/redes/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/lib.rs:
+/home/redes/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/integer128.rs:
+/home/redes/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/mod.rs:
+/home/redes/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/de.rs:
+/home/redes/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/ser.rs:
+/home/redes/Desktop/lectura_datos_acelerometro/rust_adc_daemon/target/release/build/serde-1cd6a52cbb9f0f91/out/private.rs:
+
+# env-dep:OUT_DIR=/home/redes/Desktop/lectura_datos_acelerometro/rust_adc_daemon/target/release/build/serde-1cd6a52cbb9f0f91/out
