@@ -2,7 +2,7 @@ from obspy import read
 
 # 1. Cargamos el archivo MiniSEED que generaste
 # (Podés usar "*.mseed" para que agarre el que tengas en la carpeta)
-st = read("lecturas_20261002_232421.mseed")
+st = read("sismo_20261110_000636.mseed")
 
 # 2. Imprimimos el resumen técnico (Red, Estación, Frecuencia y Cantidad de muestras)
 print("=== RESUMEN DEL ARCHIVO MINISEED ===")
