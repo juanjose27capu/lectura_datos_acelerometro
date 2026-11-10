@@ -1,0 +1,8 @@
+/home/juan-jos-caputo/Documentos/Proyecto - Sismología/lectura_datos_acelerometro/rust_adc_daemon/target/release/build/target-lexicon-1c1f932b4de0594c/build_script_build-1c1f932b4de0594c.d: /home/juan-jos-caputo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/target-lexicon-0.12.16/build.rs /home/juan-jos-caputo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/target-lexicon-0.12.16/src/data_model.rs /home/juan-jos-caputo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/target-lexicon-0.12.16/src/triple.rs /home/juan-jos-caputo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/target-lexicon-0.12.16/src/targets.rs
+
+/home/juan-jos-caputo/Documentos/Proyecto - Sismología/lectura_datos_acelerometro/rust_adc_daemon/target/release/build/target-lexicon-1c1f932b4de0594c/build_script_build-1c1f932b4de0594c: /home/juan-jos-caputo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/target-lexicon-0.12.16/build.rs /home/juan-jos-caputo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/target-lexicon-0.12.16/src/data_model.rs /home/juan-jos-caputo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/target-lexicon-0.12.16/src/triple.rs /home/juan-jos-caputo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/target-lexicon-0.12.16/src/targets.rs
+
+/home/juan-jos-caputo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/target-lexicon-0.12.16/build.rs:
+/home/juan-jos-caputo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/target-lexicon-0.12.16/src/data_model.rs:
+/home/juan-jos-caputo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/target-lexicon-0.12.16/src/triple.rs:
+/home/juan-jos-caputo/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/target-lexicon-0.12.16/src/targets.rs:

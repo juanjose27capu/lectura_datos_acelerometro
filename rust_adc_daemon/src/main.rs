@@ -156,11 +156,13 @@ fn leer_cuentas(
     spi.write(&[ADC_MUX_WRITE_COMMAND, 0x00, mux_val])?;
     spi.write(&[ADC_SYNC_COMMAND])?;
     spi.write(&[ADC_WAKEUP_COMMAND])?;
-    cs_pin.set_low();
     while drdy_pin.is_high() {}
 
+    spi.write(&[ADC_RDATA_COMMAND])?;
+    thread::sleep(Duration::from_micros(7));
+
     let mut datos = [0u8; 3];
-    spi.transfer(&mut datos, &[ADC_RDATA_COMMAND, 0x00, 0x00])?;
+    spi.read(&mut datos)?;
 
     let mut cuentas = ((datos[0] as i32) << 16) | ((datos[1] as i32) << 8) | (datos[2] as i32);
     if (cuentas & 0x800000) != 0 {
